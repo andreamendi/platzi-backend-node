@@ -4,6 +4,9 @@ const app = express();
 const { config } = require ('./config/index');
 const moviesApi = require('./routes/movies.js');
 
+//middleware del bodyparser
+app.use(express.json());
+
 moviesApi(app);
 
 
